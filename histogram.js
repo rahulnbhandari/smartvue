@@ -39,6 +39,6 @@ function printHistogramTable(input) {
 	result = getHistogramTable(input);
   console.log("Num | Count")
   for (key in result ) {
-  	console.log(key.toString()+" | "+result[key].toString());
+  	console.log(String(key.toString()+"    ").slice(0,4)+"| "+result[key].toString());
 	}
 }  
