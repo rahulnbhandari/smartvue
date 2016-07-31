@@ -18,8 +18,9 @@ function getAllPermutations(input) {
                 substr = '';
             }
         }
-       
 
+    } else {
+        throw "Invalid input string";
     }
 
     return permutations;
@@ -39,6 +40,7 @@ function getAllPermutations(input) {
                 if (typeof str === 'string') {
                     var chars = str.split(''); 
                 } else {
+                    throw "Invalid input";
                     return;
                 }
                 if(start == end-1) {
