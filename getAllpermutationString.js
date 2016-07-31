@@ -1,7 +1,8 @@
 function getAllPermutations(input) {
-    var permutations = [''];
+    
 
     if (typeof input === 'string') {
+        var permutations = ['',input];
         var inputLength = input.length;
         var i,j;
         var inputStringArray = input.split('');
@@ -11,7 +12,7 @@ function getAllPermutations(input) {
             for( i = 0; i<inputLength; i++) {
                 for(j=i;j<inputLength;j++) {
                     substr = substr.toString()+inputStringArray[j].toString();
-                    if(!(substr in permutations)) {
+                    if(!(substr in permutations) && substr.length<inputLength) {
                         getPermutations(substr);
                     }
                 }
