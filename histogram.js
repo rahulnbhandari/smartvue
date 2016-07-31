@@ -11,14 +11,14 @@
 // 99+ | xxx
 
 
-Assumption Only allowing positive integers for appropraite padding while displaying
+Assumption Only allowing positive integers 
 */
 
 var input =  [2, 1, 2, 101, 4, 95, 3, 250, 4, 1, 2, 2, 7, 98, 123, 99];
 
-printHistogramTable(input);
+printHistogram(input);
 
-function getHistogramTable(input) {
+function getHistogram(input) {
 	var result = {};
 	input.forEach(function(entry) {
       if(entry>0) {
@@ -35,8 +35,8 @@ function getHistogramTable(input) {
   return result
 }
 
-function printHistogramTable(input) {
-	result = getHistogramTable(input);
+function printHistogram(input) {
+	result = getHistogram(input);
   console.log("Num | Count")
   for (key in result ) {
   	console.log(String(key.toString()+"    ").slice(0,4)+"| "+result[key].toString());
