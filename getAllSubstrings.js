@@ -30,7 +30,6 @@ function getAllSubstrings (str) {
                 	if(!(tempSubStr in substrings)) {
                         substrings[tempSubStr] = true;
                     }
-                    tempSubStr = '';
                 }
 
                 substr = '';
