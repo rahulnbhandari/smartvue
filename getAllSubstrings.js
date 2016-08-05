@@ -4,9 +4,9 @@
 // - input “abc” should print “”, “a”, “b”, “c”, “ab”, “ac”, “bc”, “abc"
 // - input “abcd” should print “”, “a”, “b”, “c”, “d”, “ab”, “ac”, “ad”, “bc”, “bd”, “cd”, “abc”, “abd”, “acd”, “bcd”, “abcd"
 // The function can return/print the substrings in any order (no duplicates). And it is acceptable to print each string in a separate line.
-
+var substrings = {'':true};
 function getAllSubstrings (str) {
-	var substrings = {'':true};
+	
 
 	
     if (typeof str === 'string') {
@@ -34,7 +34,7 @@ function getAllSubstrings (str) {
                     for(k=1;k<substr.length-1;k++) {
                             tempSubStr = substr.slice(0,k) + substr.slice(k+1);
                             if(!(tempSubStr in substrings)) {
-                                substrings[tempSubStr] = true;
+                                getAllSubstrings(tempSubStr);
                             }
                     }
 
