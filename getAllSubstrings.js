@@ -28,12 +28,14 @@ function getAllSubstrings (str) {
                 	//using substrings as map to reduce lookup time to O(1)
                 	if(!(substr in substrings)) {
                         substrings[substr] = true;
-                         for(k=1;k<substr.length-1;k++) {
+
+                    }
+
+                    for(k=1;k<substr.length-1;k++) {
                             tempSubStr = substr.slice(0,k) + substr.slice(k+1);
                             if(!(tempSubStr in substrings)) {
                                 substrings[tempSubStr] = true;
                             }
-                        }
                     }
 
                    
